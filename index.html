@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auspify Tech - Front End Landing Page</title>
+    <title>Ajwa Riaz | Front-End Developer Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header & Navigation Bar -->
-    <header>
-        <div class="logo">Auspify Tech</div>
+    <!-- Header & Navigation -->
+    <header class="navbar">
+        <div class="logo">Ajwa<span>.dev</span></div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact" class="btn-nav">Contact Us</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact" class="nav-btn">Let's Talk</a></li>
             </ul>
         </nav>
     </header>
@@ -24,52 +29,115 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Build Your Future With Modern Tech</h1>
-            <p>We deliver cutting-edge front-end solutions, responsive web designs, and powerful digital experiences for your business.</p>
-            <a href="#features" class="btn-primary">Explore Features</a>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <h2>Our Core Features</h2>
-        <div class="feature-cards">
-            <div class="card">
-                <h3>Responsive Layout</h3>
-                <p>Fully optimized for mobile phones, tablets, and desktop computers seamlessly.</p>
-            </div>
-            <div class="card">
-                <h3>Modern Design</h3>
-                <p>Clean, elegant, and user-friendly UI developed with best industry practices.</p>
-            </div>
-            <div class="card">
-                <h3>Fast Performance</h3>
-                <p>Lightning-fast load times and optimized code structures for better UX.</p>
+            <span class="badge"><i class="fa-solid fa-code"></i> Front-End Intern at Auspify Technologies</span>
+            <h1>Hi, I'm <span class="highlight">Ajwa Riaz</span></h1>
+            <p>Crafting immersive, interactive, and responsive web experiences with modern code and gorgeous UI design.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn primary-btn">Explore Work <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#contact" class="btn secondary-btn">Contact Me</a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="about-content">
-            <h2>About Auspify Technologies</h2>
-            <p>We are dedicated to empowering new developers and providing state-of-the-art web solutions. Our internship program bridges the gap between academic knowledge and real-world industry demands.</p>
+    <section id="about" class="about">
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>Get to know me better</p>
+        </div>
+        <div class="about-container">
+            <div class="about-card glass">
+                <i class="fa-solid fa-user-graduate feature-icon"></i>
+                <h3>Who I Am</h3>
+                <p>I am a passionate Front-End Development intern dedicated to transforming creative concepts into clean, accessible, and high-performance digital interfaces.</p>
+            </div>
+            <div class="about-card glass">
+                <i class="fa-solid fa-bullseye feature-icon"></i>
+                <h3>My Mission</h3>
+                <p>To build seamless user experiences, master advanced CSS animations, and deliver professional-grade web projects that leave a lasting impact.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="section-title">
+            <h2>Technical Skills</h2>
+            <p>Technologies I work with</p>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-item glass">
+                <i class="fa-brands fa-html5" style="color: #e34f26;"><span>HTML5</span></i>
+            </div>
+            <div class="skill-item glass">
+                <i class="fa-brands fa-css3-alt" style="color: #1572b6;"><span>CSS3</span></i>
+            </div>
+            <div class="skill-item glass">
+                <i class="fa-brands fa-js" style="color: #f7df1e;"><span>JavaScript</span></i>
+            </div>
+            <div class="skill-item glass">
+                <i class="fa-solid fa-mobile-screen" style="color: #00d2ff;"><span>Responsive Design</span></i>
+            </div>
+            <div class="skill-item glass">
+                <i class="fa-solid fa-wand-magic-sparkles" style="color: #b537f2;"><span>CSS Animations</span></i>
+            </div>
+            <div class="skill-item glass">
+                <i class="fa-solid fa-layer-group" style="color: #26de81;"><span>Flexbox & Grid</span></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-title">
+            <h2>Featured Projects</h2>
+            <p>Showcasing my internship milestones</p>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card glass">
+                <div class="project-header">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <span class="tag">Task 1</span>
+                </div>
+                <h3>Responsive Landing Page</h3>
+                <p>Designed and built a fully responsive product landing page featuring modern layout styling and cross-device compatibility.</p>
+            </div>
+            <div class="project-card glass">
+                <div class="project-header">
+                    <i class="fa-solid fa-window-maximize"></i>
+                    <span class="tag">Task 2</span>
+                </div>
+                <h3>Interactive Portfolio Website</h3>
+                <p>Developed a personal professional portfolio website with smooth scrolling, dynamic card hover effects, and a stylish contact form.</p>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2>Get In Touch</h2>
-        <p>Have any questions or want to collaborate? Reach out to us!</p>
-        <div class="contact-box">
-            <p><strong>Email:</strong> support@auspify.com</p>
-            <p><strong>Website:</strong> www.auspify.com</p>
+    <section id="contact" class="contact">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+            <p>Let's build something amazing together</p>
+        </div>
+        <div class="contact-wrapper glass">
+            <form class="contact-form">
+                <div class="input-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="Your Email Address" required>
+                </div>
+                <div class="input-group">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn submit-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Auspify Technologies Intern - Maheen Riaz. All rights reserved.</p>
+        <p>&copy; 2026 Ajwa Riaz. Built with passion & dedication for Auspify Technologies.</p>
     </footer>
 
 </body>
