@@ -3,41 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajwa Riaz - Dynamic To-Do Application</title>
+    <title>Ajwa Riaz | Modern Analytics Dashboard</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <h1><i class="fa-solid fa-list-check"></i> Dynamic To-Do App</h1>
-            <p>Auspify Technologies - Task 3 by Ajwa Riaz</p>
-        </header>
-
-        <!-- Task Input Section -->
-        <div class="input-section">
-            <input type="text" id="taskInput" placeholder="Add a new task...">
-            <button id="addTaskBtn"><i class="fa-solid fa-plus"></i> Add Task</button>
-        </div>
-
-        <!-- Task Counters / Status Tracking -->
-        <div class="task-stats">
-            <div class="stat-box">
-                <span>Total: <strong id="totalTasks">0</strong></span>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h2>Ajwa<span>.dash</span></h2>
             </div>
-            <div class="stat-box">
-                <span>Completed: <strong id="completedTasks">0</strong></span>
+            <ul class="sidebar-menu">
+                <li class="active" data-target="dashboard"><a href="#"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                <li data-target="analytics"><a href="#"><i class="fa-solid fa-chart-line"></i> Analytics</a></li>
+                <li data-target="users"><a href="#"><i class="fa-solid fa-users"></i> Users</a></li>
+                <li data-target="finances"><a href="#"><i class="fa-solid fa-wallet"></i> Finances</a></li>
+                <li data-target="settings"><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <p>Auspify Technologies</p>
+                <small>Task 6 (Advanced)</small>
             </div>
-        </div>
+        </aside>
 
-        <!-- Task List Section -->
-        <ul id="taskList" class="task-list">
-            <!-- Dynamic tasks will appear here -->
-        </ul>
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-title">
+                    <h1 id="pageTitle">Dashboard Overview</h1>
+                    <p>Welcome back, <strong>Ajwa Riaz</strong>!</p>
+                </div>
+                <div class="header-profile">
+                    <div class="notification-badge"><i class="fa-solid fa-bell"></i></div>
+                    <div class="profile-avatar">AR</div>
+                </div>
+            </header>
+
+            <!-- Dynamic Views Container -->
+            <div id="viewContainer">
+                <!-- Default Dashboard View -->
+                <div class="view-section active" id="dashboard-view">
+                    <section class="stats-grid">
+                        <div class="stat-card glass">
+                            <div class="stat-icon" style="background: rgba(99, 102, 241, 0.15); color: #818cf8;">
+                                <i class="fa-solid fa-dollar-sign"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Total Revenue</h3>
+                                <p>$24,580</p>
+                                <span class="trend positive">+12.4% this month</span>
+                            </div>
+                        </div>
+                        <div class="stat-card glass">
+                            <div class="stat-icon" style="background: rgba(168, 85, 247, 0.15); color: #c084fc;">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Active Users</h3>
+                                <p>1,420</p>
+                                <span class="trend positive">+5.8% this week</span>
+                            </div>
+                        </div>
+                        <div class="stat-card glass">
+                            <div class="stat-icon" style="background: rgba(236, 72, 153, 0.15); color: #f472b6;">
+                                <i class="fa-solid fa-list-check"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Completed Tasks</h3>
+                                <p>86/94</p>
+                                <span class="trend positive">91.4% efficiency</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="analytics-section">
+                        <div class="chart-card glass">
+                            <div class="card-header">
+                                <h3>Performance Analytics</h3>
+                                <span class="badge">Real-time</span>
+                            </div>
+                            <div class="chart-body">
+                                <div class="mock-chart-bars">
+                                    <div class="bar" style="height: 60%;"><span>Mon</span></div>
+                                    <div class="bar" style="height: 85%;"><span>Tue</span></div>
+                                    <div class="bar" style="height: 45%;"><span>Wed</span></div>
+                                    <div class="bar" style="height: 95%;"><span>Thu</span></div>
+                                    <div class="bar" style="height: 70%;"><span>Fri</span></div>
+                                    <div class="bar" style="height: 80%;"><span>Sat</span></div>
+                                    <div class="bar" style="height: 90%;"><span>Sun</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="activity-card glass">
+                            <div class="card-header">
+                                <h3>Recent Activities</h3>
+                            </div>
+                            <ul class="activity-list">
+                                <li>
+                                    <i class="fa-solid fa-circle-check text-success"></i>
+                                    <div>
+                                        <p>Task 3 completed successfully</p>
+                                        <small>2 hours ago</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-file-code text-primary"></i>
+                                    <div>
+                                        <p>Dashboard layout structure updated</p>
+                                        <small>5 hours ago</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-user-plus text-purple"></i>
+                                    <div>
+                                        <p>New client account registered</p>
+                                        <small>1 day ago</small>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Analytics View -->
+                <div class="view-section" id="analytics-view">
+                    <div class="card-header">
+                        <h3>Detailed Traffic & Conversion Analytics</h3>
+                    </div>
+                    <div class="glass" style="padding: 30px; text-align: center;">
+                        <p style="color: var(--text-muted); margin-bottom: 15px;">Advanced metrics and visitor growth graphs for Ajwa Riaz's project.</p>
+                        <div class="mock-chart-bars" style="margin-top: 20px;">
+                            <div class="bar" style="height: 75%;"><span>W1</span></div>
+                            <div class="bar" style="height: 60%;"><span>W2</span></div>
+                            <div class="bar" style="height: 90%;"><span>W3</span></div>
+                            <div class="bar" style="height: 95%;"><span>W4</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Users View -->
+                <div class="view-section" id="users-view">
+                    <div class="card-header">
+                        <h3>Registered System Users</h3>
+                    </div>
+                    <div class="glass" style="padding: 25px;">
+                        <table style="width: 100%; text-align: left; border-collapse: collapse;">
+                            <thead>
+                                <tr style="border-bottom: 1px solid var(--border-color); color: var(--text-muted);">
+                                    <th style="padding: 10px;">Name</th>
+                                    <th style="padding: 10px;">Role</th>
+                                    <th style="padding: 10px;">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.03);">
+                                    <td style="padding: 12px;">Ajwa Riaz</td>
+                                    <td style="padding: 12px; color: #818cf8;">Lead Developer / Intern</td>
+                                    <td style="padding: 12px; color: #34d399;">Active</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.03);">
+                                    <td style="padding: 12px;">Auspify Evaluator</td>
+                                    <td style="padding: 12px; color: #c084fc;">Administrator</td>
+                                    <td style="padding: 12px; color: #34d399;">Online</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Finances View -->
+                <div class="view-section" id="finances-view">
+                    <div class="card-header">
+                        <h3>Financial Records & Reports</h3>
+                    </div>
+                    <div class="glass" style="padding: 30px;">
+                        <h2 style="color: #34d399; margin-bottom: 10px;">$24,580.00</h2>
+                        <p style="color: var(--text-muted);">Total net earnings recorded for the current Q2 financial cycle under Auspify Technologies project guidelines.</p>
+                    </div>
+                </div>
+
+                <!-- Settings View -->
+                <div class="view-section" id="settings-view">
+                    <div class="card-header">
+                        <h3>Application Preferences</h3>
+                    </div>
+                    <div class="glass" style="padding: 30px;">
+                        <p style="color: var(--text-muted); margin-bottom: 15px;">Theme: <strong>Dark Glassmorphism (Modern)</strong></p>
+                        <p style="color: var(--text-muted);">Developer Profile: <strong>Ajwa Riaz</strong> (Auspify Intern)</p>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
 
     <script src="script.js"></script>
